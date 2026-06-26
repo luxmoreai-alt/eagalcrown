@@ -13,6 +13,7 @@ export function BrandLogo({ compact = false, inverted = false }: BrandLogoProps)
           src={brandAssets.logoMark}
           alt=""
           aria-hidden="true"
+          decoding="async"
           className="h-full w-full object-cover"
         />
       </span>

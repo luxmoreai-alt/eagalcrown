@@ -26,6 +26,7 @@ export function LoaderOverlay({ label = "Eagle Crown" }: LoaderOverlayProps) {
         <motion.img
           src={brandAssets.logoMark}
           alt="Eagle Crown Group of Companies"
+          decoding="async"
           className="relative size-24 object-contain drop-shadow-2xl sm:size-28"
           animate={{ y: [0, -8, 0], rotateY: [0, 12, 0] }}
           transition={{ duration: 1.15, repeat: Infinity, ease: "easeInOut" }}

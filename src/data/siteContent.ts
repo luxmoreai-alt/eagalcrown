@@ -249,9 +249,9 @@ export const stats = [
 export const brandAssets = {
   logo: "/assets/eagle-crown-logo.png",
   logoMark: "/assets/eagle-crown-logo-mark.png",
-  eagle: "/assets/eagle-crown-hero.png",
-  foods: "/assets/sr-foods-produce.png",
-  brandPortfolio: "/assets/business/eagle-crown-brand-portfolio.png",
+  eagle: "/assets/eagle-crown-hero-optimized.jpg",
+  foods: "/assets/sr-foods-produce-optimized.jpg",
+  brandPortfolio: "/assets/business/eagle-crown-brand-portfolio-optimized.jpg",
 };
 
 export const businessIconMap = {

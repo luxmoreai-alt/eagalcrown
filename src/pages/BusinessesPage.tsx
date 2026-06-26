@@ -25,10 +25,10 @@ const businessMedia = {
   mahuva: "/assets/business/mahuva-spirit.jpeg",
   cashewFenny: "/assets/business/cashew-fenny.jpeg",
   aramane: "/assets/business/aramane-malt-whisky.jpeg",
-  srFoodsKiosk: "/assets/business/sr-foods-franchise-kiosk.png",
-  oneBiteSnacks: "/assets/business/one-bite-snacks-display.png",
-  vegPopsSnacks: "/assets/business/vegpops-vegetable-snacks.png",
-  fruitBiteSnacks: "/assets/business/fruit-bite-fruit-snacks.png",
+  srFoodsKiosk: "/assets/business/sr-foods-franchise-kiosk-optimized.jpg",
+  oneBiteSnacks: "/assets/business/one-bite-snacks-display-optimized.jpg",
+  vegPopsSnacks: "/assets/business/vegpops-vegetable-snacks-optimized.jpg",
+  fruitBiteSnacks: "/assets/business/fruit-bite-fruit-snacks-optimized.jpg",
 };
 
 const galleryImages = [
@@ -196,6 +196,8 @@ export function BusinessesPage() {
               <img
                 src={businessMedia.oneBiteSnacks}
                 alt="One Bite mini snacks and beverages display"
+                loading="lazy"
+                decoding="async"
                 className="aspect-[16/10] w-full object-cover opacity-90"
               />
             </div>
@@ -328,6 +330,8 @@ function HeroImage({ src, alt, tall = false }: { src: string; alt: string; tall?
       <img
         src={src}
         alt={alt}
+        loading="eager"
+        decoding="async"
         className={`w-full object-cover ${tall ? "aspect-[4/5]" : "aspect-[4/3]"}`}
       />
     </div>
@@ -357,7 +361,13 @@ function ProductMarquee() {
               key={`${image.src}-${index}`}
               className="h-48 w-40 shrink-0 overflow-hidden rounded-lg border border-white/10 bg-white/8 sm:h-64 sm:w-52"
             >
-              <img src={image.src} alt={image.alt} className="h-full w-full object-cover" />
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
             </div>
           ))}
         </div>
@@ -450,13 +460,25 @@ function MediaMosaic({ media }: { media: { src: string; alt: string }[] }) {
   return (
     <div className={`grid gap-3 ${secondary.length ? "sm:grid-cols-[1.1fr_0.9fr]" : ""}`}>
       <div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
-        <img src={primary.src} alt={primary.alt} className="aspect-[4/3] w-full object-cover" />
+        <img
+          src={primary.src}
+          alt={primary.alt}
+          loading="lazy"
+          decoding="async"
+          className="aspect-[4/3] w-full object-cover"
+        />
       </div>
       {secondary.length ? (
         <div className="grid gap-3">
           {secondary.slice(0, 2).map((image) => (
             <div key={image.src} className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
-              <img src={image.src} alt={image.alt} className="aspect-[4/3] w-full object-cover" />
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                decoding="async"
+                className="aspect-[4/3] w-full object-cover"
+              />
             </div>
           ))}
         </div>

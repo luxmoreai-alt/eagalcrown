@@ -34,6 +34,9 @@ export function PageHero({
           src={image}
           alt=""
           aria-hidden="true"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
           className="absolute inset-0 z-0 h-full w-full scale-105 object-cover opacity-44 mix-blend-luminosity motion-safe:animate-hero-drift"
         />
       ) : null}

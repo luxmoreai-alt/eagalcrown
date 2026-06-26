@@ -131,6 +131,8 @@ export function HomePage() {
               <img
                 src={brandAssets.brandPortfolio}
                 alt="Eagle Crown brand portfolio with franchise kiosk, beverages, and healthy snacks"
+                loading="lazy"
+                decoding="async"
                 className="aspect-square w-full object-cover"
               />
             </div>
@@ -218,6 +220,8 @@ function HomeHeroEagle() {
         <img
           src={brandAssets.logoMark}
           alt=""
+          loading="eager"
+          decoding="async"
           className="home-eagle-mark"
         />
       </div>

@@ -6,6 +6,7 @@ import { cn } from "../lib/classNames";
 import { BrandLogo } from "./BrandLogo";
 import { FloatingWhatsApp } from "./FloatingWhatsApp";
 import { PageSwitchLoader } from "./PageSwitchLoader";
+import { ScrollToTop } from "./ScrollToTop";
 import { SiteLoader } from "./SiteLoader";
 
 export function AppLayout() {
@@ -87,6 +88,7 @@ export function AppLayout() {
       <Outlet key={location.pathname} />
 
       <Footer />
+      <ScrollToTop />
       <FloatingWhatsApp />
     </div>
   );
